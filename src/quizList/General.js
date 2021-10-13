@@ -1,21 +1,18 @@
-const quizList = [
+const general = [
   {
-    question:
-      " What does Dozen mean? ",
+    question: " What does Dozen mean? ",
     answers: ["11", "12", "13", "14"],
     correct: "12",
     questionId: "1"
   },
   {
-    question:
-      'What country is sushi from?',
+    question: 'What country is Sushi from?',
     answers: ["Wales", "Moldova", "Japan", "Denmark"],
     correct: "Japan",
     questionId: "2"
   },
   {
-    question:
-      "How Long Is A Fortnight?",
+    question: "How long is A Fortnight?",
     answers: ["One week", "One month", "27 days", "Two weeks"],
     correct: "Two weeks",
     questionId: "3"
@@ -38,8 +35,7 @@ const quizList = [
     questionId: "5"
   },
   {
-    question:
-      "How many days are in a year?",
+    question: "How many days are in a year?",
     answers: [
       "364",
       "367",
@@ -372,4 +368,4 @@ const quizList = [
 ];
 
 export default (n = 5) =>
-  Promise.resolve(quizList.sort(() => 0.5 - Math.random()).slice(0, n));
+  Promise.resolve(general.sort(() => 0.5 - Math.random()).slice(0, n));
