@@ -62,11 +62,12 @@ class Quizbee extends React.Component {
   }
 
   playAgain = () => {
-    this.getQuestions(this.state.currentQuiz);
     this.setState({
       score: 0,
-      responses: 0
+      responses: 0,
+      questionBank: []
     });
+    this.getQuestions(this.state.currentQuiz);
   }
 
   render() {
