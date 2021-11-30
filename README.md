@@ -6,7 +6,6 @@ A simple quiz app built with react
 
 ### User story
 
-- User should be able to select options.
 - User should see their score displayed after selecting five options.
 - Clicking play again should restart the quiz.
 

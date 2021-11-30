@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const QuestionBox = ({question, options, selected}) => {
     const [answer, setAnswer] = useState(options);
+    
     return (
         <div className="questionBox">
             <div className="question">{question}</div>
@@ -12,9 +13,11 @@ const QuestionBox = ({question, options, selected}) => {
                     onClick={() => {
                         setAnswer([text]);
                         selected(text);
-                    }}>
+                    }}
+                >
                     {text}
-                </button>)}
+                </button>
+            )}
         </div>
     );
 };
