@@ -4,8 +4,6 @@ import { InputLabel, FormControl, NativeSelect } from '@mui/material';
 
 import BootstrapInput from "../assets/BootStrapInput";
 
-
-
 const QuizSelect = ({selected}) => {
     const [type, setType] = useState('');
 
