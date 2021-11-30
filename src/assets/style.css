@@ -4,6 +4,39 @@
   font-family: "Roboto", sans-serif;
 }
 
+.menu-item {
+  cursor: pointer;
+  flex-grow: 1;
+}
+.menu-item:hover {
+  color: #28c75d
+}
+
+
+.bar{
+  padding-top: 1.15rem;
+  background-color: #fff;    
+}
+
+.select-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;  
+  background-image: linear-gradient(
+      115deg,
+      rgba(102, 196, 83, 0.801),
+      rgba(136, 206, 157, 0.7)
+  ),
+  url(https://media.istockphoto.com/photos/male-student-taking-notes-or-taking-a-test-in-a-university-wearing-picture-id1305363956?b=1&k=20&m=1305363956&s=170667a&w=0&h=NF4ZlSijB_eYu-I_Ux9U1Xp_DE75_-VrMHqjKtMZiz4=);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
 .container {
   width: auto;
   height: auto;
@@ -44,29 +77,20 @@
 .score-board {
   position: relative;
   height: auto;
+  text-align: center;
 }
 
 .score {
-  position: absolute;
-  width: auto;
-  font-size: 2em;
-  top: 30px;
-  text-align: center;
-  left: 0px;
-  right: 0px;
+  font-size: 2em;  
 }
 
 .playBtn {
-  position: absolute;
   font-size: 1.4em;
-  padding: 10px;
-  top: 90px;
+  padding: 10px;  
   background-color: rgb(46, 182, 46);
   color: rgb(255, 255, 255);
-  width: 150px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
+  width: 150px; 
+  margin: 10px;
   outline: none;
   cursor: pointer;
 }
@@ -91,8 +115,7 @@
  border: 1px solid transparent;
  user-select: none;
  text-align: center;
- display: inline-block;
- width: 20%;
+ display: inline-block; 
  margin: 5px;
  transition: all 0.3s ease;
  position: relative;
@@ -100,7 +123,7 @@
  font-weight: 500;
  font-size: 14px;
  padding: 6px 16px;
- box-shadow: 3px 5px 0px 0px #33d669;
+ width: auto;
  border-color: #48da79;
  background: #48da79;
  color: #fff;
@@ -109,8 +132,43 @@
 }
 
 .option:hover, .option:focus, .option:active {
-  box-shadow: 0 0 0 0.2rem;
   border-color: #28c75d !important;
-  background: #28c75d !important;
-  
+  background: #28c75d !important;  
+}
+
+.form-group {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  left: 20%; 
+}
+
+@media (max-width: 450px) {
+  .form-group {
+      left: 20%;
+  }
+}
+
+@media (min-width: 450px) {
+  .form-group {
+      left: 30%;
+  }
+}
+
+@media (min-width: 625px) {
+  .form-group {
+      left: 40%;
+  }
+}
+
+@media (max-width: 780px) {
+  .bar {
+  flex-direction: column
+  }
+  .menu-item {
+    padding-bottom: 1rem;
+  }
 }
